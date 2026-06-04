@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Currency Conversion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f6f8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 600px;
+            }
+
+            .header-container {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .purple-bar {
+                width: 4px;
+                height: 40px;
+                background-color: #8e44ad;
+                margin-right: 15px;
+            }
+
+            .header-text h3 {
+                margin: 0;
+                font-size: 15px;
+                color: #333;
+                line-height: 1.4;
+            }
+
+            .card {
+                background-color: #ffffff;
+                border-radius: 8px;
+                padding: 30px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                width: 80%;
+                max-width: 400px;
+            }
+
+            .card h2 {
+                color: #8e44ad;
+                margin-top: 0;
+                margin-bottom: 25px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                color: #555;
+                font-size: 12px;
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-size: 13px;
+                color: #333;
+            }
+
+            .form-control::placeholder {
+                color: #aaa;
+            }
+
+            select.form-control {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 12px;
+                padding-right: 30px;
+            }
+
+            .button-group {
+                margin-top: 25px;
+                display: flex;
+                gap: 10px;
+            }
+
+            .btn {
+                padding: 8px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .btn-submit {
+                background-color: #e0e0e0;
+                color: #333;
+            }
+
+            .btn-cancel {
+                background-color: #e0e0e0;
+                color: #333;
+            }
+
+            .btn:hover {
+                background-color: #d0d0d0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header-container">
+                <div class="purple-bar"></div>
+                <div class="header-text">
+                    <h3>Use JSP Declaration Tag, JSP Scriptlet and JSP<br>Expression in Application</h3>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Currency Conversion</h2>
+
+                <form action="processCurrency.jsp" method="POST">
+
+                    <div class="form-group">
+                        <label for="amount">Amount (in RM)</label>
+                        <input type="number" id="amount" name="amount" class="form-control" placeholder="[in RM]" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currency">Convert to</label>
+                        <select id="currency" name="currency" class="form-control">
+                            <option value="1">USD</option>
+                            <option value="2">EURO</option>
+                            <option value="3">JPY</option>
+                            <option value="4">SGD</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                        <button type="reset" class="btn btn-cancel">Cancel</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

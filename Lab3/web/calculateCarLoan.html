@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Car Loan Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <h2>Perform Car Loan Calculation</h2>
+
+        <form action="processCalculateCarLoan.jsp" method="POST">
+            <fieldset style="width: fit-content;">
+                <legend>Loan Calculation</legend>
+
+                <table>
+                    <tr>
+                        <td><label for="amount">Loan Amount *</label></td>
+                        <td><input type="text" id="amount" name="amount" placeholder="Amount" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="period">Period</label></td>
+                        <td>
+                            <select id="period" name="period">
+                                <option value="3">3 years</option>
+                                <option value="4">4 years</option>
+                                <option value="5">5 years</option>
+                                <option value="7">7 years</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br>
+                            <input type="submit" value="Submit">
+                            <input type="button" value="Cancel">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+
+        <p>&copy;2026-Adly Azamin</p>
+
+    </body>
+</html>
