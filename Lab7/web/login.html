@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Student Portal - Entry Login</title>
+    </head>
+    <body>
+        <div style="margin: 60px auto; width: 360px; font-family: Arial, sans-serif;">
+            <h2 style="text-align: center;">Student Login Portal</h2>
+            <form action="dashboard.jsp" method="post">
+                <table border="1" cellpadding="10" cellspacing="0" width="100%">
+                    <tr>
+                        <td><strong>Matric No:</strong></td>
+                        <td><input type="text" name="matric_no" placeholder="e.g. DI210088" required style="width: 92%;" /></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Password:</strong></td>
+                        <td><input type="password" name="password" required style="width: 92%;" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Authenticate & Enter" style="padding: 6px 16px; cursor: pointer;" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
