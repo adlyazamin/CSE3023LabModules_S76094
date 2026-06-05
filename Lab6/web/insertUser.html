@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register New User</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 40px;
+            }
+            fieldset {
+                max-width: 300px;
+                padding: 20px;
+            }
+            input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend><h2>User Registration</h2></legend>
+            <form action="processUser.jsp" method="POST">
+                <label for="username">Username (Max 15 chars):</label>
+                <input type="text" id="username" name="username" maxlength="15" required>
+
+                <label for="password">Password (Max 10 chars):</label>
+                <input type="password" id="password" name="password" maxlength="10" required>
+
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" maxlength="50" required>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" maxlength="50" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </fieldset>
+    </body>
+</html>
